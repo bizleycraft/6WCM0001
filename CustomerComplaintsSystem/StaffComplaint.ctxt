@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=StaffComplaint
+comment1.params=s\ c\ d\ m\ e
+comment1.target=StaffComplaint(int,\ Customer,\ Date,\ java.lang.String,\ Staff)
+comment1.text=\r\n\ s\:\ The\ submission's\ ID\r\n\ c\:\ The\ customer\r\n\ d\:\ The\ date\ of\ submission\r\n\ m\:\ The\ main\ content\r\n\ e\:\ The\ relevant\ employee\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

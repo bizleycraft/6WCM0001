@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Customer
+comment1.params=i\ n\ a\ e\ p
+comment1.target=Customer(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ i\:\ The\ customer's\ id\r\n\ n\:\ The\ customer's\ name\r\n\ a\:\ The\ customer's\ physical\ address\r\n\ e\:\ The\ customer's\ email\ address\r\n\ p\:\ The\ customer's\ phone\ number\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

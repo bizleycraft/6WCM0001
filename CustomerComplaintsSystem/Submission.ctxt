@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Submission
+comment1.params=s\ c\ d\ m
+comment1.target=Submission(int,\ Customer,\ Date,\ java.lang.String)
+comment1.text=\r\n\ s\:\ The\ submission's\ ID\r\n\ c\:\ The\ customer\r\n\ d\:\ The\ date\ of\ the\ submission\r\n\ m\:\ The\ main\ content\r\n
+comment2.params=
+comment2.target=int\ getID()
+comment3.params=
+comment3.target=Date\ getDate()
+comment4.params=s
+comment4.target=int\ compareTo(Submission)
+comment5.params=
+comment5.target=Customer\ getCustomer()
+comment6.params=
+comment6.target=java.lang.String\ getContent()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LiftComplaint
+comment1.params=s\ c\ d\ m\ l\ f
+comment1.target=LiftComplaint(int,\ Customer,\ Date,\ java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ s\:\ The\ submission's\ ID\r\n\ i\:\ The\ contributor's\ ID\r\n\ d\:\ The\ date\ of\ submission\r\n\ c\:\ The\ complaint\r\n\ l\:\ The\ lift\r\n\ f\:\ The\ floor\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

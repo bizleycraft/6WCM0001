@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Staff
+comment1.params=i\ n\ d\ r
+comment1.target=Staff(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ i\:\ The\ employee's\ id\r\n\ n\:\ The\ employee's\ name\r\n\ d\:\ The\ employee's\ department\r\n\ r\:\ The\ employee's\ role\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

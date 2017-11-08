@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Complaint
+comment1.params=s\ c\ d\ m
+comment1.target=Complaint(int,\ Customer,\ Date,\ java.lang.String)
+comment1.text=\r\n\ s\:\ The\ submission's\ ID\r\n\ c\:\ The\ customer\r\n\ d\:\ The\ date\ of\ submission\r\n\ m\:\ The\ main\ content\r\n
+comment2.params=r\ d
+comment2.target=void\ assignResolver(int,\ Date)
+comment2.text=Assigns\ a\ resolver\ and\ sets\ the\ deadline
+comment3.params=
+comment3.target=java.util.List\ getActions()
+comment4.params=
+comment4.target=boolean\ getResolved()
+comment5.params=id\ description\ date
+comment5.target=void\ recordAction(int,\ java.lang.String,\ Date)
+comment6.params=
+comment6.target=void\ resolve()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8
