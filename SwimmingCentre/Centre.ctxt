@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Centre
+comment0.text=\r\n\ An\ amateur\ swimming\ club.\r\n\ \r\n\ @author\ Mick\ Wood\ \r\n\ @version\ November\ 2004\r\n
+comment1.params=name
+comment1.target=Centre(java.lang.String)
+comment2.params=s
+comment2.target=void\ addSession(Session)
+comment2.text=\ \r\n\ Adds\ a\ session\ to\ the\ sessions\ HashMap\r\n\ s\:\ session\ to\ add\r\n
+comment3.params=sess
+comment3.target=void\ cancelSession(Session)
+comment3.text=\ \r\n\ Removes\ a\ session\ from\ the\ sessions\ HashMap\r\n\ sess\:\ session\ to\ cancel\r\n\ \r\n\ For\ the\ record,\ I\ was\ forced\ to\ use\ that\ \r\n\ weird\ variable\ by\ the\ instructions\r\n\ \r\n\ I\ personally\ prefer\ single\ letters\ for\ \r\n\ local\ variables\r\n
+comment4.params=d
+comment4.target=void\ searchSessionsByDate(Date)
+comment4.text=\ \r\n\ Searches\ for\ a\ session\ by\ date\r\n\ d\:\ date\ to\ search\ for\r\n
+numComments=5

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Session
+comment0.text=\r\n\ Class\ Session\ describes\ sessions\ organized\ by\ a\ swimming\ centre.\r\n\ \r\n\ @author\ \r\n\ @version\ \r\n
+comment1.params=SessionCode\ description\ fee\ date
+comment1.target=Session(java.lang.String,\ java.lang.String,\ double,\ Date)
+comment2.params=m
+comment2.target=void\ signUp(Member)
+comment2.text=\ \r\n\ Signs\ a\ member\ up\ to\ the\ session\r\n\ m\:\ member\ to\ sign\ up\r\n
+comment3.params=
+comment3.target=void\ showMembersOnSession()
+comment3.text=\ \r\n\ Prints\ the\ list\ of\ signed\ up\ members\r\n
+comment4.params=
+comment4.target=java.lang.String\ getSessionCode()
+comment5.params=
+comment5.target=double\ getFee()
+comment6.params=
+comment6.target=Date\ getStartDate()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

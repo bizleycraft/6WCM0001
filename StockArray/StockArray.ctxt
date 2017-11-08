@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=StockArray
+comment0.text=\r\n\ Handles\ an\ array\ of\ StockItems\r\n\r\n\ @author\ Joshua\ Bizley\r\n\ @version\ 6/27/2017\r\n
+comment1.params=s
+comment1.target=StockArray(int)
+comment1.text=\r\n\ s\:\ size\ of\ the\ array\r\n
+comment2.params=i\ d\ p
+comment2.target=void\ addNewStockItem(int,\ java.lang.String,\ int)
+comment2.text=\r\n\ Creates\ a\ new\ StockItem\ and\ adds\ it\ to\ the\ array\r\n\ i\:\ index\ where\ the\ item\ should\ be\ placed\ in\ the\ array\r\n\ d\:\ description\ of\ StockItem\r\n\ p\:\ price\ of\ StockItem\r\n
+comment3.params=
+comment3.target=int\ noOfStockItems()
+comment3.text=\ \r\n\ Returns\ the\ length\ of\ the\ stock\ array\ \r\n
+comment4.params=index
+comment4.target=void\ displayStockItem(int)
+comment4.text=\ \r\n\ Displays\ the\ details\ of\ a\ single\ StockItem\r\n\ i\:\ index\ of\ StockItem\ in\ the\ stock\ array\r\n
+comment5.params=
+comment5.target=void\ listAllStockItems()
+comment5.text=\ \r\n\ Displays\ the\ details\ of\ a\ single\ StockItem\r\n
+comment6.params=index\ amount
+comment6.target=void\ updateStockLevel(int,\ int)
+comment6.text=\ \r\n\ Displays\ the\ details\ of\ all\ StockItems\ in\ the\ stock\ array\r\n
+numComments=7

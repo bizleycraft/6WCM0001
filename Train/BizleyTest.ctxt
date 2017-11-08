@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BizleyTest
+comment0.text=\r\n\ Beautifies\ the\ console\ output\ during\ testing\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ 6/27/2017\r\n
+comment1.params=
+comment1.target=BizleyTest()
+comment1.text=\ \r\n\ Marking\ the\ constructor\ as\ private\ ensures\ the\ user\ \r\n\ learns\ that\ this\ class's\ methods\ are\ static\ \r\n
+comment2.params=s
+comment2.target=void\ test(java.lang.String)
+comment2.text=\ \r\n\ Prints\ a\ hammer\r\n\ Call\ before\ running\ error-testing\ code\r\n\ s\:\ String\ with\ what\ you\ are\ testing,\ e.g.\ "null\ indexes"\r\n
+comment3.params=s
+comment3.target=void\ print(java.lang.String)
+comment3.text=\ \r\n\ Prints\ a\ butterfly\ in\ front\ of\ a\ single\ line\ \r\n\ s\:\ String\ to\ be\ printed\r\n
+comment4.params=
+comment4.target=void\ success()
+comment4.text=\ \r\n\ Prints\ "success"\ in\ ASCII\ art\ format\ \r\n
+comment5.params=
+comment5.target=void\ end()
+comment5.text=\ \r\n\ Prints\ credits\ \r\n
+numComments=6

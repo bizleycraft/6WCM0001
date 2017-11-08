@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Date
+comment0.text=\r\n\ Simple\ Date\ Class\ -\ no\ error\ checking.\r\n\ \r\n\ @author\ \r\n\ @version\ Version\ 1.0\ -\ 31/10/02\ Amended\ by\ A.Marczyk\ 10/10/2003\r\n\ \r\n
+comment1.params=
+comment1.target=Date()
+comment1.text=\r\n\ Parameterless\ constructor\ for\ objects\ of\ class\ Date\r\nDate\ set\ to\ 1/1/2000
+comment2.params=d\ m\ y
+comment2.target=Date(int,\ int,\ int)
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Date\r\n\ @param\ d\ -\ the\ day\ part\ of\ the\ date\ (1\ -\ 31,\ depending\ on\ the\ month).\r\n\ @param\ m\ -\ the\ month\ part\ of\ the\ date\ (1\ -\ 12).\r\n@param\ y\ -\ the\ year\ part\ of\ the\ date.
+comment3.params=d\ m\ y
+comment3.target=void\ setDate(int,\ int,\ int)
+comment3.text=\r\n\ method\ to\ set\ the\ Date\r\n\ @param\ d\ -\ the\ day\ part\ of\ the\ date\ (1\ -\ 31,\ depending\ on\ the\ month).\r\n\ @param\ m\ -\ the\ month\ part\ of\ the\ date\ (1\ -\ 12).\r\n\ @param\ y\ -\ the\ year\ part\ of\ the\ date.\r\nNote\:\ No\ error\ checking\ in\ this\ version\ \!
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n@return\ the\ date\ as\ a\ String,\ format\ "09/11/2002"
+comment5.params=i
+comment5.target=java.lang.String\ as2Digits(int)
+comment5.text=Internal\ method\ to\ add\ a\ leading\ zero\ if\ necessary.
+comment6.params=o
+comment6.target=boolean\ equals(java.lang.Object)
+comment6.text=\ \r\n\ The\ equals()\ method\ has\ been\ mostly\ copied\ from\ Chris's\ code,\r\n\ reformatted\ to\ my\ style.\ Thanks\ Chris.\r\n\ \r\n\ Formatting\ changes\:\r\n\ I\ use\ single-letters\ as\ formal\ parameters\r\n\ I\ put\ blocks\ with\ a\ single\ line\ on\ a\ single\ line\r\n\ I\ use\ 'this'\ as\ little\ as\ possible\r\n\ \r\n\ I\ had\ originally\ overloaded\ instead\ of\ overridden\ equals,\ \r\n\ which\ is\ a\ bad\ idea\ due\ to\ the\ way\ some\ collection\ classes\ \r\n\ make\ use\ of\ equals().\r\n\ \r\n\ I\ was\ confused\ about\ why\ '@Override'\ was\ written\ here.\r\n\ The\ method\ is\ an\ override\ with\ or\ without\ that\ line.\r\n\ It\ turns\ out\ that\ @Override\ notifies\ the\ compiler\ that\r\n\ you\ intend\ to\ override\ a\ method\ here.\r\n\ \r\n\ If\ you\ have\ overridden\ it\ incorrectly,\ the\ compiler\ will\ tell\ you.\r\n\ \r\n\ o\:\ Object\ to\ compare\ to\ *this*\ object\r\n
+numComments=7

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Train
+comment0.text=\r\n\ Represents\ a\ train\r\n\r\n\ @author\ Joshua\ Bizley\r\n\ @version\ 6/27/2017\r\n
+comment1.params=d\ n\ c\ p\ dN\ dI
+comment1.target=Train(java.lang.String,\ int,\ int,\ int,\ java.lang.String,\ int)
+comment1.text=\r\n\ d\:\ the\ destination\ of\ the\ Train\r\n\ n\:\ the\ number\ of\ the\ Train\r\n\ c\:\ the\ capacity\ of\ the\ Train\r\n\ p\:\ the\ cost\ of\ a\ ticket\r\n\ dN\:\ the\ driver's\ name\r\n\ dI\:\ the\ driver's\ ID\r\n
+comment2.params=
+comment2.target=int\ getTotalTakings()
+comment2.text=Basic\ Accessors
+comment3.params=p
+comment3.target=void\ setTicketPrice(int)
+comment3.text=Basic\ Mutators
+comment4.params=
+comment4.target=void\ resetTotalTakings()
+comment4.text=\ \r\n\ Resets\ money\ taken\ for\ train\ tickets\ \r\n
+comment5.params=
+comment5.target=void\ leaveTrain()
+comment5.text=\ \r\n\ Records\ a\ customer\ leaving\ the\ train\ \r\n
+comment6.params=
+comment6.target=void\ enterTrain()
+comment6.text=\ \r\n\ Records\ a\ customer\ entering\ the\ Train\ \r\n
+numComments=7

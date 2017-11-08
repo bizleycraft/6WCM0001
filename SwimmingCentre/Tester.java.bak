@@ -1,0 +1,75 @@
+
+/**
+ * Write a description of class Tester here.
+ * 
+ * @author Mick Wood 
+ * @version November 2004
+ */
+public class Tester
+{
+    private static Rally r1 = new Rally ("Enf04", "Enfield Chase", 20.00, 5, 6);
+    private static Rally r2 = new Rally ("Barn-11-04", "High Barnet", 15.00, 5, 4);
+    
+    
+    private static Member m1 = new Member (1, "Mick Wood",'A');
+    private static Member m2 = new Member (2, "Olenka Marczyk",'A');    
+    private static Member m3 = new Member (3, "David Pearson",'A');
+    private static Member m4 = new Member (4, "Bodo Scholtz",'A');
+    private static Member m5 = new Member (5, "Isaac Milnerwood",'C');
+    private static Member m6 = new Member (6, "Jessica Stedman",'C');
+    private static Member m7 = new Member (7, "Agnes Joaiu",'C');
+    private static Member m8 = new Member (8, "Janice Milnerwood",'A');
+    
+    private static Club club1 = new Club("Hatfield");
+    
+    public static void main (String[] args)
+    {
+        r1.setDate (15, 11, 2004);
+        r2.setDate (20, 11, 2004);
+        
+        /** r1.signUp (m1);
+        r1.signUp (m2);
+        r1.signUp (m3);
+        r1.signUp (m4);
+        r1.signUp (m5);     */
+        
+        club1.addRally (r1);
+        club1.addRally (r2);        
+        
+        club1.addMember (m1);
+        club1.addMember (m2);
+        club1.addMember (m3);
+        club1.addMember (m4);
+        club1.addMember (m5);        
+        club1.addMember (m6);  
+        club1.addMember (m7);  
+        //club1.addMember (m8);          
+        
+        club1.signUpForRally (m1, r1);
+        club1.signUpForRally (m2, r1);
+        club1.signUpForRally (m3, r1);
+        club1.signUpForRally (m4, r1);
+        club1.signUpForRally (m5, r1);      
+
+        club1.signUpForRally (m4, r2);  
+        club1.signUpForRally (m6, r2);  
+        club1.signUpForRally (m7, r2);  
+        //club1.signUpForRally (m8, r2);  
+        
+        /** System.out.println (r1.getMembersOnRally());
+        System.out.println ("Fees for this rally: " + r1.getTotalFees());
+        System.out.println ("Full rally: " + r1.isFull());        */
+        
+        club1.printAllMembers ();
+        club1.printAllRallies();
+        System.out.println ("\n\nROBUSTNESS TESTS");
+        Rally r3 = new Rally ("Barn-11-04", "High Barnet", 15.00, 5, 4);
+        club1.addRally (r3);
+        club1.addMember (m1);
+        
+        club1.signUpForRally (m8, r2);  //not a member
+        club1.signUpForRally (m7, r2);  //already signed up      
+        club1.signUpForRally (m6, r1);  //rally full        
+        
+    }
+}

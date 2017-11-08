@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Driver
+comment0.text=\r\n\ \ An\ object\ of\ this\ class\ is\ a\ Driver\ of\ a\ coach.\r\n\r\n\ @author\ Mick\ Wood\r\n\ @version\ March\ 2009\r\n
+comment1.params=n\ i
+comment1.target=Driver(java.lang.String,\ int)
+numComments=2

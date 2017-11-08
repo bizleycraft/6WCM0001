@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ArrayExercises
+comment0.text=\r\n\ Handles\ various\ arrays\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ 6/27/2017\r\n
+comment1.params=m
+comment1.target=int\ monthLength(int)
+comment1.text=\ \r\n\ Returns\ the\ number\ of\ days\ in\ the\ passed\ month\ \r\n\ m\:\ month\r\n
+comment2.params=m
+comment2.target=void\ printPerGrade(int[])
+comment2.text=\ \r\n\ Prints\ the\ number\ of\ marks\ that\ were\ in\ each\ grade\ tier\r\n\ m\:\ array\ of\ marks\r\n
+comment3.params=s
+comment3.target=void\ printNumberOfVowels(java.lang.String)
+comment3.text=\r\n\ Prints\ the\ number\ of\ each\ vowel\ in\ the\ passed\ String\r\n\ and\ displays\ an\ equal\ number\ of\ stars\r\n\ s\:\ String\ to\ find\ vowels\ in\r\n
+comment4.params=n
+comment4.target=void\ printStars(int)
+comment4.text=\r\n\ Prints\ a\ number\ of\ stars\ equal\ to\ the\ passed\ int\r\n\ n\:\ number\ of\ stars\r\n
+numComments=5

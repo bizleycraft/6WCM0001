@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=id\ n\ ty
+comment0.target=Member(int,\ String,\ char)
+comment0.text=\nCreates\ a\ Member\ with\ a\ unique\ id\ number\ and\ a\ name\ initialised\ from\ parameters\n@param\ id\ it\ is\ the\ responsibility\ of\ the\ client\ to\ ensure\ that\ id\ is\ a\ unique\ number\n@param\ n\ is\ the\ String\ representation\ of\ the\ member's\ name\n@param\ ty\ is\ the\ memer\ type\ (A\ for\ adult,\ C\ for\ child)\n\n
+comment1.target=int\ getId()
+comment1.text=\n@return\ member\ id\ as\ an\ int\n\n
+comment2.target=String\ getName()
+comment2.text=\n@return\ member's\ name\n\n
+comment3.target=char\ getType()
+comment3.text=\nreturns\ member's\ membership\ type\ as\ a\ char\n@return\ 'A'\ for\ adult,\ 'C'\ for\ child\ \n
+comment4.target=String\ toString()
+comment4.text=\n@return\ a\ String\ representation\ of\ the\ student,\ including\ the\ id\ number,\ name\ and\ points\n\n
+numComments=5
