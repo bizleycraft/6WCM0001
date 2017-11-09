@@ -1,4 +1,4 @@
-public class Submission implements Comparable<Submission>, Identifiable
+public class Submission implements Comparable<Submission>, Identifiable, Archivable
 {
     /* The submission's id */
     private int submissionID;
@@ -27,6 +27,7 @@ public class Submission implements Comparable<Submission>, Identifiable
     public int compareTo(Submission s){return date.compareTo(s.getDate());}
     public Customer getCustomer(){return customer;}
     public String getContent(){return content;}
+    public boolean isArchivable(){return true;}
     @Override
     public String toString()
     {

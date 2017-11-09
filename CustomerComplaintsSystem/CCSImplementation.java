@@ -24,115 +24,95 @@ public class CCSImplementation implements CCS
         staffIDSystem = new IDSystem();
         submissionIDSystem = new IDSystem();
     }
-    public void addComment(int submissionId, int customerId, String comment, Date date)
+    public void addComment(int submissionID, int customerID, String comment, Date date)
     {
-        submissions.add(new Submission(submissionId, getCustomer(customerId), date, comment));
+        submissions.add(new Submission(submissionID, getCustomer(customerID), date, comment));
     }
-    public void addCustomer(int customerId, String name, String address, String email, String phone)
+    public void addCustomer(int customerID, String name, String address, String email, String phone)
     {
-        customers.add(new Customer(customerId, name, address, email, phone));
+        customers.add(new Customer(customerID, name, address, email, phone));
     }
-    public void addGeneralComplaint(int submissionId, int customerId, String description, Date date)
+    public void addGeneralComplaint(int submissionID, int customerID, String description, Date date)
     {
-        submissions.add(new Complaint(submissionId, getCustomer(customerId), date, description));
+        submissions.add(new Complaint(submissionID, getCustomer(customerID), date, description));
     }
-    public void addLiftComplaint(int submissionId, int customerId, String description, String lift, int floor, Date date)
+    public void addLiftComplaint(int submissionID, int customerID, String description, String lift, int floor, Date date)
     {
-        submissions.add(new LiftComplaint(submissionId, getCustomer(customerId), date, description, lift, floor));
+        submissions.add(new LiftComplaint(submissionID, getCustomer(customerID), date, description, lift, floor));
     }
-    public void addStaff(int staffId, String name, String role, String department)
+    public void addStaff(int staffID, String name, String role, String department)
     {
-        staff.add(new Staff(staffId, name, department, role));
+        staff.add(new Staff(staffID, name, department, role));
     }
-    public void addStaffComplaint(int submissionId, int customerId, String description, int staffId, Date date)
+    public void addStaffComplaint(int submissionID, int customerID, String description, int staffID, Date date)
     {
-        submissions.add(new StaffComplaint(submissionId, getCustomer(customerId), date, description, getStaff(staffId)));
+        submissions.add(new StaffComplaint(submissionID, getCustomer(customerID), date, description, getStaff(staffID)));
     }
     public void archiveSubmissions()
     {
         for(int i = 0; i < submissions.size(); i++)
         {
             Submission s = submissions.get(i);
-            if(s.getClass().toString() == "Complaint")
-            {
-                Complaint c = (Complaint) s;
-                if(c.getResolved())
-                {
-                    submissions.remove(i--);
-                    System.out.println(s.toString());
-                }
-            }
-            else
+            if (s.isArchivable())
             {
                 submissions.remove(i--);
                 System.out.println(s.toString());
             }
         }
     }
-    public void assignResolver(int complaintId, int staffId, Date deadLine)
+    public void assignResolver(int complaintID, int staffID, Date deadLine)
     {
-        Complaint c = (Complaint) getSubmission(complaintId);
-        c.assignResolver(staffId,deadLine);
+        Complaint c = (Complaint) getSubmission(complaintID);
+        c.assignResolver(staffID,deadLine);
     }
-    public List<Action> getActionsForComplaint(int complaintId)
+    public List<Action> getActionsForComplaint(int complaintID)
     {
-        Complaint c = (Complaint) getSubmission(complaintId);
+        Complaint c = (Complaint) getSubmission(complaintID);
         return c.getActions();
     }
-    public Customer getCustomer(int customerId)
+    public Customer getCustomer(int customerID)
     {
-        return IDSystem.findWithID(customers, customerId);
+        return IDSystem.findWithID(customers, customerID);
     }
     public List<Customer> getCustomerList(){return customers;}
     public int getNewCustomerId(){return customerIDSystem.newID();}
     public int getNewStaffId(){return staffIDSystem.newID();}
     public int getNewSubmissionId(){return submissionIDSystem.newID();}
-    public Staff getStaff(int staffId)
+    public Staff getStaff(int staffID)
     {
-        return IDSystem.findWithID(staff, staffId);
+        return IDSystem.findWithID(staff, staffID);
     }
     public List<Staff> getStaffList(){return staff;}
-    public Submission getSubmission(int submissionId)
+    public Submission getSubmission(int submissionID)
     {
-        return IDSystem.findWithID(submissions, submissionId);
+        return IDSystem.findWithID(submissions, submissionID);
     }
     
     public List<Submission> getSubmissionList(){return submissions;}
-    public void recordAction(int complaintId, String actionTaken, Date date)
+    public void recordAction(int complaintID, String actionTaken, Date date)
     {
-        Complaint c = (Complaint) getSubmission(complaintId);
-        c.recordAction(complaintId, actionTaken, date);
+        Complaint c = (Complaint) getSubmission(complaintID);
+        c.recordAction(complaintID, actionTaken, date);
     }
-    public void recordComplaintResolved(int complaintId)
+    public void recordComplaintResolved(int complaintID)
     {
-        Complaint c = (Complaint) getSubmission(complaintId);
+        Complaint c = (Complaint) getSubmission(complaintID);
         c.resolve();
     }
-    public void removeCustomer(int customerId)
+    public void removeCustomer(int customerID)
     {
-        for(int i = 0; i < customers.size(); i++)
-        {
-            if(customers.get(i).getID() == customerId)
-            {
-                customers.remove(i); 
-                break;
-            }
-        }
+        IDSystem.removeWithID(customers, customerID);
     }
     public void listNewComplaints()
     {
-        TreeSet<Complaint> t = new TreeSet<Complaint>();
+        TreeSet<Submission> t = new TreeSet<Submission>();
         for(Submission s : submissions)
         {
-            if(s.getClass().toString() == "Complaint")
+            if(!s.isArchivable())
             {
-                Complaint c = (Complaint) s;
-                if(!c.getResolved())
-                {
-                    t.add(c);
-                }
+                t.add(s);
             }
         }
-        for(Complaint c : t){System.out.println(c.toString());}
+        for(Submission c : t){System.out.println(c.toString());}
     }
 }

@@ -33,7 +33,7 @@ public class Complaint extends Submission
         deadline = d;
     }
     public List<Action> getActions(){return actions;}
-    public boolean getResolved(){return resolved;}
+    public boolean isArchivable(){return resolved;}
     public void recordAction(int id, String description, Date date){actions.add(new Action(id, description, date));}
     public void resolve()
     {
