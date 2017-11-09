@@ -21,7 +21,8 @@ public class Staff extends Person
     public String toString()
     {
         String s = "STAFF NAME: " + getName();
-        s = s + "\nSTAFF ID: " + getID();
+        s = s + "\nDEPARTMENT: " + department;
+        s = s + "\nROLE: " + role;
         return s;
     }
 }

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class IDSystem
+public class IDSystem<T extends Identifiable>
 {
     private int numOfIDs = 0;
     public int newID(){return ++numOfIDs;}

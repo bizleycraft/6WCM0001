@@ -20,9 +20,9 @@ public class CCSImplementation implements CCS
         submissions = new ArrayList<Submission>();
         staff = new ArrayList<Staff>();
         customers = new ArrayList<Customer>();
-        customerIDSystem = new IDSystem();
-        staffIDSystem = new IDSystem();
-        submissionIDSystem = new IDSystem();
+        customerIDSystem = new IDSystem<Customer>();
+        staffIDSystem = new IDSystem<Staff>();
+        submissionIDSystem = new IDSystem<Submission>();
     }
     public void addComment(int submissionID, int customerID, String comment, Date date)
     {
