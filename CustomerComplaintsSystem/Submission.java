@@ -1,4 +1,4 @@
-public class Submission implements Comparable<Submission>
+public class Submission implements Comparable<Submission>, Identifiable
 {
     /* The submission's id */
     private int submissionID;

@@ -1,4 +1,4 @@
-public class Person
+public class Person implements Identifiable
 {
     /* The person's id */
     private int id;

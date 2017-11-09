@@ -81,11 +81,7 @@ public class CCSImplementation implements CCS
     }
     public Customer getCustomer(int customerId)
     {
-        for(Customer c : customers)
-        {
-            if(c.getID() == customerId){return c;}
-        }
-        return null;
+        return IDSystem.findWithID(customers, customerId);
     }
     public List<Customer> getCustomerList(){return customers;}
     public int getNewCustomerId(){return customerIDSystem.newID();}
@@ -93,21 +89,14 @@ public class CCSImplementation implements CCS
     public int getNewSubmissionId(){return submissionIDSystem.newID();}
     public Staff getStaff(int staffId)
     {
-        for(Staff s : staff)
-        {
-            if(s.getID() == staffId){return s;}
-        }
-        return null;
+        return IDSystem.findWithID(staff, staffId);
     }
     public List<Staff> getStaffList(){return staff;}
     public Submission getSubmission(int submissionId)
     {
-        for(Submission s : submissions)
-        {
-            if(s.getID() == submissionId){return s;}
-        }
-        return null;
+        return IDSystem.findWithID(submissions, submissionId);
     }
+    
     public List<Submission> getSubmissionList(){return submissions;}
     public void recordAction(int complaintId, String actionTaken, Date date)
     {
