@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=Staff
-comment1.params=i\ n\ d\ r
-comment1.target=Staff(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-comment1.text=\r\n\ i\:\ The\ employee's\ id\r\n\ n\:\ The\ employee's\ name\r\n\ d\:\ The\ employee's\ department\r\n\ r\:\ The\ employee's\ role\r\n
+comment0.text=\r\n\ Represents\ a\ member\ of\ staff\r\n\ \r\n\ (Task\ 4/Implementing\ an\ inheritance\ tree)\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ November\ 10th,\ 2017\r\n
+comment1.params=name\ department\ role
+comment1.target=Staff(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=Initialises\ the\ member\ of\ staff\r\n\ \r\n\ (Task\ 4/Implementing\ an\ inheritance\ tree)\r\n\ \r\n\ @param\ name\ The\ staff\ member's\ name\r\n\ @param\ department\ The\ staff\ member's\ department\r\n\ @param\ role\ The\ staff\ member's\ role\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
+comment2.text=Returns\ String\ description\ of\ this\ object\r\n\ \r\n\ (Introduction/Implementing\ toString\ in\ all\ classes)\r\n\ \r\n\ @return\ The\ details\ of\ this\ object\r\n
 numComments=3

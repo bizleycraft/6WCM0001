@@ -1,11 +1,10 @@
 #BlueJ class context
 comment0.target=IDSystem
+comment0.text=\r\n\ Handles\ IDs\r\n\ \r\n\ (Task\ 2/Implementing\ the\ interface/Providing\ unique\ ids)\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ November\ 10th,\ 2017\r\n
 comment1.params=
 comment1.target=int\ newID()
+comment1.text=Initialises\ the\ Customer\ Complaints\ System\r\n\ \r\n\ (Task\ 2/Implementing\ the\ interface/Providing\ unique\ ids)\r\n\ \r\n\ @return\ A\ unique\ id\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
-comment3.params=list\ id
-comment3.target=Identifiable\ findWithID(java.util.List,\ int)
-comment4.params=list\ id
-comment4.target=void\ removeWithID(java.util.List,\ int)
-numComments=5
+comment2.text=Returns\ String\ description\ of\ this\ object\r\n\ \r\n\ (Introduction/Implementing\ toString\ in\ all\ classes)\r\n\ \r\n\ @return\ The\ details\ of\ this\ object\r\n
+numComments=3

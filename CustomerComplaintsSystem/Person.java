@@ -1,26 +1,38 @@
-public class Person implements Identifiable
+/**
+ * Represents a person
+ * 
+ * (Task 4/Implementing an inheritance tree)
+ * 
+ * @author Joshua Bizley
+ * @version November 10th, 2017
+ */
+public class Person
 {
-    /* The person's id */
-    private int id;
     /* The person's name */
     private String name;
     
-    /*
-     * r: The person's id
-     * n: The person's name
+    /**Initialises the Person
+     * 
+     * (Task 4/Implementing an inheritance tree)
+     * 
+     * @param name The person's name
      */
-    public Person(int i, String n)
+    public Person(String name)
     {
-        id = i;
-        name = n;
+        /* Assigns the local variable to the instance variable */
+        this.name = name;
     }
-    public int getID(){return id;}
-    public String getName(){return name;}
+    
+    /**Returns String description of this object
+     * 
+     * (Introduction/Implementing toString in all classes)
+     * 
+     * @return The details of this object
+     */
     @Override
     public String toString()
     {
-        String s = "PERSON NAME: " + name;
-        s = s + "\nPERSON ID: " + id;
-        return s;
+        /* Returns the details of this object */
+        return "NAME: " + name;
     }
 }

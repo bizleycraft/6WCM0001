@@ -1,31 +1,40 @@
 import java.util.*;
 
-public class IDSystem<T extends Identifiable>
+/**
+ * Handles IDs
+ * 
+ * (Task 2/Implementing the interface/Providing unique ids)
+ * 
+ * @author Joshua Bizley
+ * @version November 10th, 2017
+ */
+public class IDSystem
 {
+    /* The total number of IDs created by this id system so far */
     private int numOfIDs = 0;
-    public int newID(){return ++numOfIDs;}
+    
+    /**Initialises the Customer Complaints System
+     * 
+     * (Task 2/Implementing the interface/Providing unique ids)
+     * 
+     * @return A unique id
+     */
+    public int newID()
+    {
+        /* Adds 1 to the total number of IDs and return it */
+        return ++numOfIDs;
+    }
+    
+    /**Returns String description of this object
+     * 
+     * (Introduction/Implementing toString in all classes)
+     * 
+     * @return The details of this object
+     */
     @Override
     public String toString()
     {
+        /* Returns the details of this object */
         return "NUMBER OF IDS: " + numOfIDs;
-    }
-    public static <T extends Identifiable> T findWithID(List<T> list, int id)
-    {
-        for(T obj : list)
-        {
-            if(obj.getID() == id){return obj;}
-        }
-        return null;
-    }
-    public static <T extends Identifiable> void removeWithID(List<T> list, int id)
-    {
-        for(int i = 0; i < list.size(); i++)
-        {
-            if(list.get(i).getID() == id)
-            {
-                list.remove(i); 
-                break;
-            }
-        }
     }
 }

@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=Action
-comment1.params=i\ s\ d
-comment1.target=Action(int,\ java.lang.String,\ Date)
-comment1.text=\r\n\ i\:\ The\ complaint's\ id\r\n\ s\:\ The\ description\ of\ the\ action\r\n\ d\:\ The\ date\ the\ action\ was\ taken\r\n
+comment0.text=\r\n\ Represents\ actions\ taken\ by\ resolvers\ on\ complaints\r\n\ \r\n\ (Task\ 2/Implementing\ the\ interface/Recording\ actions)\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ November\ 10th,\ 2017\r\n
+comment1.params=description\ date
+comment1.target=Action(java.lang.String,\ Date)
+comment1.text=Initialises\ the\ Action\r\n\ \r\n\ (Task\ 2/Implementing\ the\ interface/Recording\ actions)\r\n\ \r\n\ @param\ description\ A\ description\ of\ the\ action\r\n\ @param\ date\ The\ date\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
+comment2.text=Returns\ String\ description\ of\ this\ object\r\n\ \r\n\ (Introduction/Implementing\ toString\ in\ all\ classes)\r\n\ \r\n\ @return\ The\ details\ of\ this\ object\r\n
 numComments=3

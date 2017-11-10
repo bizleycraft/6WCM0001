@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=Person
-comment1.params=i\ n
-comment1.target=Person(int,\ java.lang.String)
-comment1.text=\r\n\ r\:\ The\ person's\ id\r\n\ n\:\ The\ person's\ name\r\n
+comment0.text=\r\n\ Represents\ a\ person\r\n\ \r\n\ (Task\ 4/Implementing\ an\ inheritance\ tree)\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ November\ 10th,\ 2017\r\n
+comment1.params=name
+comment1.target=Person(java.lang.String)
+comment1.text=Initialises\ the\ Person\r\n\ \r\n\ (Task\ 4/Implementing\ an\ inheritance\ tree)\r\n\ \r\n\ @param\ name\ The\ person's\ name\r\n
 comment2.params=
-comment2.target=int\ getID()
-comment3.params=
-comment3.target=java.lang.String\ getName()
-comment4.params=
-comment4.target=java.lang.String\ toString()
-numComments=5
+comment2.target=java.lang.String\ toString()
+comment2.text=Returns\ String\ description\ of\ this\ object\r\n\ \r\n\ (Introduction/Implementing\ toString\ in\ all\ classes)\r\n\ \r\n\ @return\ The\ details\ of\ this\ object\r\n
+numComments=3

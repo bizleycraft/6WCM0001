@@ -1,30 +1,48 @@
+/**
+ * Represents actions taken by resolvers on complaints
+ * 
+ * (Task 2/Implementing the interface/Recording actions)
+ * 
+ * @author Joshua Bizley
+ * @version November 10th, 2017
+ */
 public class Action
 {
-    /* The ID of the complaint */
-    private int id;
     /* A description of the action */
     private String description;
+    
     /* The date the action was taken */
     private Date date;
     
-    /*
-     * i: The complaint's id
-     * s: The description of the action
-     * d: The date the action was taken
+    /**Initialises the Action
+     * 
+     * (Task 2/Implementing the interface/Recording actions)
+     * 
+     * @param description A description of the action
+     * @param date The date
      */
-    public Action(int i, String s, Date d)
+    public Action(String description, Date date)
     {
-        id = i;
-        description = s;
-        date = d;
+        /* Assigns the local variables to the instance variables */
+        this.description = description;
+        this.date = date;
     }
+    
+    /**Returns String description of this object
+     * 
+     * (Introduction/Implementing toString in all classes)
+     * 
+     * @return The details of this object
+     */
     @Override
     public String toString()
     {
+        /* Concatenates the details of the object */
         String s = "ACTION";
-        s = s + "\nCOMPLAINT ID: " + id;
         s = s + "\nDESCRIPTION OF ACTION: " + description;
         s = s + "\nDATE OF ACTION: " + date;
+        
+        /* Returns the details of this object */
         return s;
     }
 }
