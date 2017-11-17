@@ -49,11 +49,12 @@ public class Test
     
     public static void main(String[] args)
     {
-        System.out.println("\nBooting up CCS...");
+        System.out.println("Booting up CCS...");
         System.out.println("This program should end with TEST COMPLETE.");
         System.out.println("Otherwise, something is broken.");
-        System.out.println("\nCompare the results to the static variables in the test class.");
-        System.out.println("You may want to edit them to make them more intuitive.");
+        System.out.println("\nCompare the results to the test plan.");
+        System.out.println("You may want to edit the static variables" +
+            "in the test class to make them more intuitive.");
         CCSImplementation ccs = new CCSImplementation();
         
         System.out.println("\nTesting ID System\n");
@@ -98,7 +99,7 @@ public class Test
         System.out.println("\nPrinting toString() of all customers...\n");
         for(Customer c: ccs.getCustomerList()){ System.out.println(c.toString() + "\n");}
 
-        System.out.println("\nCreating Comment.");
+        System.out.println("Creating Comment.");
         int commentID = ccs.getNewSubmissionId();
         ccs.addComment(commentID,customerID,comment,date);
         System.out.println("Printing toString() of that submission:\n");
@@ -137,9 +138,9 @@ public class Test
         System.out.println("\nPrinting toString() of all staff...\n");
         for(Staff s: ccs.getStaffList()){ System.out.println(s.toString() + "\n");}
         
-        System.out.println("Number of submissions (should be 4)");
+        System.out.print("Number of submissions (should be 4): ");
         System.out.println(ccs.getSubmissionList().size());
-        System.out.println("\nNumber of new complaints (should be 3)");
+        System.out.print("\nNumber of new complaints (should be 3): ");
         System.out.println(ccs.getNewComplaintsList().size());
         System.out.println("\nPrinting toString() of all submissions...\n");
         
@@ -173,19 +174,42 @@ public class Test
         ccs.archiveSubmissions();
         
         System.out.print("\nNumber of submissions (should be 3): ");
-        System.out.println(ccs.getSubmissionList().size());
-
+        System.out.println(ccs.getSubmissionList().size() + "\n");
+        
+        System.out.println("Recording an action for the lift complaint.");
         ccs.recordAction(liftComplaintID, "Fixed the elevator", new Date(6,4,2017));
+        
+        System.out.println("\nRecording an action for the staff complaint.");
         ccs.recordAction(staffComplaintID, "Asked Kiamara to knock more quietly", new Date(6,4,2017));
+        
+        System.out.println("\nRecording another action for the staff complaint.");
         ccs.recordAction(staffComplaintID, "Informed the customer that Kiamara would be knocking more quietly", new Date(6,4,2017));
+        
+        System.out.println("\nPrinting out list of actions for the general complaint: \n");
         for(Action a: ccs.getActionsForComplaint(generalComplaintID)){ System.out.println(a.toString() + "\n");}
+        
+        System.out.println("Printing out list of actions for the lift complaint: \n");
         for(Action a: ccs.getActionsForComplaint(liftComplaintID)){ System.out.println(a.toString() + "\n");}
+        
+        System.out.println("Printing list of actions for the staff complaint: \n");
         for(Action a: ccs.getActionsForComplaint(staffComplaintID)){ System.out.println(a.toString() + "\n");}
+        
+        System.out.println("Recording the lift complaint as resolved.");
         ccs.recordComplaintResolved(liftComplaintID);
+        
+        System.out.println("\nArchiving submissions.\n");
         ccs.archiveSubmissions();
+        
+        System.out.print("\nCounting number of submissions (should be 2): ");
         System.out.println(ccs.getSubmissionList().size());
+        
+        System.out.println("\nRecording the staff complaint as resolved.");
         ccs.recordComplaintResolved(staffComplaintID);
+        
+        System.out.println("\nArchiving submissions.\n");
         ccs.archiveSubmissions();
+        
+        System.out.print("\nCounting number of submissions (should be 1): ");
         System.out.println(ccs.getSubmissionList().size());
         
         System.out.println("\nTEST COMPLETE");
