@@ -179,21 +179,34 @@ public class CCSImplementation implements CCS
      */
     public void archiveSubmissions()
     {
-        /* For each submission */
-        submissions.forEach((k,v)->
+        /* Creates a iterator to use instead of forEach
+         * 
+         * This was necessary because removing the submissions inside
+         * of a forEach loop resulted in a ConcurrentModificationException
+         * 
+         * The alternative would have been to create a list of ids
+         * of removable submissions but this seems to be cleaner
+         */
+        Iterator it = submissions.values().iterator();
+        
+        /* Iterates through every submission */
+        while(it.hasNext())
         {
+            /* Casts the object to a submission */
+            Submission sub = (Submission) it.next();
+            
             /* If the submission is archivable
              * False only in the case of an unresolved complaint 
              */
-            if (v.isArchivable())
+            if (sub.isArchivable())
             {
                 /* Prints out the submission */
-                System.out.println(v.toString());
+                System.out.println(sub.toString());
                 
                 /* Removes the submission from the system */
-                submissions.remove(k);
+                it.remove();
             }
-        });
+        }
     }
     
     /**Assigns a resolver to a Complaint

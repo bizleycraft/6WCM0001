@@ -6,11 +6,17 @@
  */
 public class Test
 {
-    /* The customer */
+    /* The first customer */
     private static String customerName = "Joshua Bizley";
     private static String address = "St Aldridge, London";
     private static String email = "joshua@gmail.com";
     private static String phone = "07979797979";
+    
+    /* The second customer */
+    private static String customerName2 = "Jane Austen";
+    private static String address2 = "Rosewood Cottage, Kent";
+    private static String email2 = "janey@gmail.com";
+    private static String phone2 = "02323232323";
     
     /* The comment */
     private static String comment = "Staff are friendly.";
@@ -50,12 +56,48 @@ public class Test
         System.out.println("You may want to edit them to make them more intuitive.");
         CCSImplementation ccs = new CCSImplementation();
         
+        System.out.println("\nTesting ID System\n");
+        
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Creating new customer ID: ");
+            System.out.println(ccs.getNewCustomerId());
+        }
+        
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Creating new staff ID: ");
+            System.out.println(ccs.getNewStaffId());
+        }
+        
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Creating new submission ID: ");
+            System.out.println(ccs.getNewSubmissionId());
+        }
+        
+        System.out.println("\nTesting System Additions");
+        
         System.out.println("\nCreating new customer.");
         int customerID = ccs.getNewCustomerId();
         ccs.addCustomer(customerID,customerName,address,email,phone);
         System.out.println("Printing toString() of that customer:\n");
         System.out.println(ccs.getCustomer(customerID).toString());
         
+        System.out.println("\nCreating another new customer.");
+        int customerID2 = ccs.getNewCustomerId();
+        ccs.addCustomer(customerID2,customerName2,address2,email2,phone2);
+        System.out.println("Printing toString() of that customer:\n");
+        System.out.println(ccs.getCustomer(customerID2).toString());
+        
+        System.out.println("\nPrinting toString() of all customers...\n");
+        for(Customer c: ccs.getCustomerList()){ System.out.println(c.toString() + "\n");}
+        
+        System.out.println("Removing the second customer.");
+        ccs.removeCustomer(customerID2);
+        System.out.println("\nPrinting toString() of all customers...\n");
+        for(Customer c: ccs.getCustomerList()){ System.out.println(c.toString() + "\n");}
+
         System.out.println("\nCreating Comment.");
         int commentID = ccs.getNewSubmissionId();
         ccs.addComment(commentID,customerID,comment,date);
@@ -103,24 +145,49 @@ public class Test
         
         for(Submission s: ccs.getSubmissionList()){ System.out.println(s.toString() + "\n");}
        
-        System.out.println("Make sure you see all 4 submissions.\n");
+        System.out.println("Make sure you see all 4 submissions.");
+        
+        System.out.println("\nTesting Complaint Resolution and Archiving\n");
         
         System.out.println("Assigning staff member 2 to resolve the 3 complaints.");
         
         ccs.assignResolver(generalComplaintID,staffID2,date5);
-        ccs.assignResolver(liftComplaintID,staffID2,date5);
-        ccs.assignResolver(staffComplaintID,staffID2,date5);
         
-        System.out.println("\nNumber of new complaints (should be 0)");
+        System.out.print("\nNumber of new complaints (should be 2): ");
         System.out.println(ccs.getNewComplaintsList().size());
         
+        ccs.assignResolver(liftComplaintID,staffID2,date5);
         
+        System.out.print("\nNumber of new complaints (should be 1): ");
+        System.out.println(ccs.getNewComplaintsList().size());
         
+        ccs.assignResolver(staffComplaintID,staffID2,date5);
         
+        System.out.print("\nNumber of new complaints (should be 0): ");
+        System.out.println(ccs.getNewComplaintsList().size());
         
+        System.out.print("\nNumber of submissions (should be 4): ");
+        System.out.println(ccs.getSubmissionList().size());
         
+        System.out.println("\nArchiving submissions:\n");
+        ccs.archiveSubmissions();
         
+        System.out.print("\nNumber of submissions (should be 3): ");
+        System.out.println(ccs.getSubmissionList().size());
+
+        ccs.recordAction(liftComplaintID, "Fixed the elevator", new Date(6,4,2017));
+        ccs.recordAction(staffComplaintID, "Asked Kiamara to knock more quietly", new Date(6,4,2017));
+        ccs.recordAction(staffComplaintID, "Informed the customer that Kiamara would be knocking more quietly", new Date(6,4,2017));
+        for(Action a: ccs.getActionsForComplaint(generalComplaintID)){ System.out.println(a.toString() + "\n");}
+        for(Action a: ccs.getActionsForComplaint(liftComplaintID)){ System.out.println(a.toString() + "\n");}
+        for(Action a: ccs.getActionsForComplaint(staffComplaintID)){ System.out.println(a.toString() + "\n");}
+        ccs.recordComplaintResolved(liftComplaintID);
+        ccs.archiveSubmissions();
+        System.out.println(ccs.getSubmissionList().size());
+        ccs.recordComplaintResolved(staffComplaintID);
+        ccs.archiveSubmissions();
+        System.out.println(ccs.getSubmissionList().size());
         
-        System.out.println("\nTEST COMPLETE (will be updated)");
+        System.out.println("\nTEST COMPLETE");
     }
 }

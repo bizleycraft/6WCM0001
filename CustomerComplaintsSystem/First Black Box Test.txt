@@ -1,0 +1,41 @@
+First Test Result: Exception Thrown
+
+Last Output Leading Up To Exception:
+
+Archiving submissions:
+
+COMMENT
+CUSTOMER NAME: Joshua Bizley
+CUSTOMER ADDRESS: St Aldridge, London
+CUSTOMER EMAIL: joshua@gmail.com
+CUSTOMER PHONE NO: 07979797979
+CONTENT: Staff are friendly.
+DATE OF COMMENT: 01/01/2017
+
+Exception:
+
+java.util.ConcurrentModificationException
+	at java.util.HashMap.forEach(HashMap.java:1291)
+	at CCSImplementation.archiveSubmissions(CCSImplementation.java:183)
+	at Test.main(Test.java:153)
+
+Test line 153: ccs.archiveSubmissions();
+CCSImplementation line 183: submissions.forEach((k,v)->
+
+Explanation: Removing a submission inside of the forEach loop resulted in an error. 
+
+Resolution: I used an iterator instead of a forEach loop and call remove() on the iterator instead of the map.
+
+
+
+Second Test Result: Incorrect Output
+
+Incorrect Output: The last two tests resulted in 3 and 3 instead of 2 and 1.
+
+Explanation: It appeared that marking complaints as resolved wasn't making them eligible for archiving.
+
+Resolution: It turned out I had simply missed out those two lines to archive submissions in the test.
+
+
+
+Third Test Result: Success
