@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Represents a staff complaint
  * 
@@ -25,6 +27,20 @@ public class StaffComplaint extends Complaint
         /* Assigns the local variables to the instance variables */
         super(customer,date,content);
         this.staff = staff;
+    }
+    
+    /**Checks that the staff still exists on the system
+     * 
+     * (Task 7/Exceptions)
+     */
+    public void validateStaff(Map<Integer,Staff> staffs) throws AbsentFromSystemException
+    {
+        //If the system contains the customer
+        if(!staffs.containsValue(staff))
+        {
+            // Throws an exception and prints out the customer's details
+            throw new AbsentFromSystemException(staff.toString());
+        }
     }
     
     /**Returns String description of this object

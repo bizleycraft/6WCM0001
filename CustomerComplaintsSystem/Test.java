@@ -2,7 +2,7 @@
  * Testing CCSImplementation for Tasks 1-4
  * 
  * @author Joshua Bizley
- * @version November 10th, 2017
+ * @version November 29th, 2017
  */
 public class Test
 {
@@ -194,7 +194,13 @@ public class Test
         System.out.println("Printing list of actions for the staff complaint: \n");
         for(Action a: ccs.getActionsForComplaint(staffComplaintID)){ System.out.println(a.toString() + "\n");}
         
-        System.out.println("Recording the lift complaint as resolved.");
+        System.out.println("Removing the first staff member.");
+        ccs.removeStaff(staffID);
+        
+        System.out.println("\nValidating that member of staff in a complaint about them:\n");
+        ccs.validateStaff(staffComplaintID);
+        
+        System.out.println("\nRecording the lift complaint as resolved.");
         ccs.recordComplaintResolved(liftComplaintID);
         
         System.out.println("\nArchiving submissions.\n");
@@ -211,6 +217,12 @@ public class Test
         
         System.out.print("\nCounting number of submissions (should be 1): ");
         System.out.println(ccs.getSubmissionList().size());
+        
+        System.out.println("\nRemoving the first customer.");
+        ccs.removeCustomer(customerID);
+        
+        System.out.println("\nValidating that customer in one of their complaints:\n");
+        ccs.validateCustomer(generalComplaintID);
         
         System.out.println("\nTEST COMPLETE");
     }

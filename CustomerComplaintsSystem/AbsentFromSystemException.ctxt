@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AbsentFromSystemException
+comment0.text=\r\n\ Checks\ that\ the\ customer\ still\ exists\ on\ the\ system\r\n\ \r\n\ (Task\ 7/Exceptions)\r\n\ \r\n\ @author\ Joshua\ Bizley\r\n\ @version\ November\ 29th,\ 2017\r\n
+comment1.params=message
+comment1.target=AbsentFromSystemException(java.lang.String)
+numComments=2

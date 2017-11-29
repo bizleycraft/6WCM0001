@@ -6,7 +6,7 @@ import java.util.*;
  * (Task 4/Implementing an inheritance tree)
  * 
  * @author Joshua Bizley
- * @version November 10th, 2017
+ * @version November 29th, 2017
  */
 public class Complaint extends Submission
 {
@@ -46,6 +46,20 @@ public class Complaint extends Submission
         
         /* The complaint is initialised as unresolved */
         resolved = false;
+    }
+    
+    /**Checks that the customer still exists on the system
+     * 
+     * (Task 7/Exceptions)
+     */
+    public void validateCustomer(Map<Integer,Customer> customers) throws AbsentFromSystemException
+    {
+        //If the system contains the customer
+        if(!customers.containsValue(getCustomer()))
+        {
+            // Throws an exception and prints out the customer's details
+            throw new AbsentFromSystemException(getCustomer().toString());
+        }
     }
     
     /**Assigns a member of staff as resolver and sets a deadline

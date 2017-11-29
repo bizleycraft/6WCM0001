@@ -6,7 +6,7 @@ import java.util.*;
  * (Task 2/Implementing the interface)
  * 
  * @author Joshua Bizley
- * @version November 10th, 2017
+ * @version November 29th, 2017
  */
 public class CCSImplementation implements CCS
 {
@@ -239,7 +239,7 @@ public class CCSImplementation implements CCS
         /* Downcasts the Submission to a Complaint */
         Complaint c = (Complaint) getSubmission(complaintID);
         
-        /* Returns the list of Actions stored in the Complaint */
+        /* Assigns the list of Actions stored in the Complaint to l */
         return c.getActions();
     }
     
@@ -354,6 +354,48 @@ public class CCSImplementation implements CCS
         return toList(submissions);
     }
     
+    /**Checks that the customer still exists on the system
+     * 
+     * (Task 7/Exceptions)
+     */
+    public void validateCustomer(int complaintID)
+    {
+        // Attempt the following
+        try
+        {
+            // Downcast the submission to a general complaint
+            Complaint c = (Complaint) getSubmission(complaintID);
+            // Check if the customer is on the system
+            c.validateCustomer(customers);
+        }
+        catch(AbsentFromSystemException e)
+        {
+            // Print out the customer's details
+            System.out.println(e.toString());
+        }
+    }
+    
+    /**Checks that the staff member still exists on the system
+     * 
+     * (Task 7/Exceptions)
+     */
+    public void validateStaff(int staffComplaintID)
+    {
+        // Attempt the following
+        try
+        {
+            // Downcast the submission to a staff complaint
+            StaffComplaint c = (StaffComplaint) getSubmission(staffComplaintID);
+            // Check if the staff member is on the system
+            c.validateStaff(staff);
+        }
+        catch(AbsentFromSystemException e)
+        {
+            // Print out the staff member's details
+            System.out.println(e.toString());
+        }
+    }
+    
     /**Adds an Action to a Complaint's list of Actions
      * 
      * (Task 2/Implementing the interface)
@@ -397,6 +439,18 @@ public class CCSImplementation implements CCS
     {
         /* Remove the customer with the passed id */
         customers.remove(customerID);
+    }
+    
+    /**Removes a Staff from the system
+     * 
+     * (No Task, added because it seems useful)
+     * 
+     * @param staffID The id of the staff to remove
+     */
+    public void removeStaff(int staffID)
+    {
+        /* Remove the staff member with the passed id */
+        staff.remove(staffID);
     }
     
     /**Returns a list of Complaints that do not yet have a 
